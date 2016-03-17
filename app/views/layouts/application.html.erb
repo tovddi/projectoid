@@ -3,10 +3,16 @@
 <head>
   <title>Projectoid</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<header>
+  <%= link_to "Projects", projects_path %>
+  <%= link_to "People", people_path %>
+</header>
+<br>
 
 <%= yield %>
 
