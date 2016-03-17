@@ -1,3 +1,13 @@
 <h1><%= @project.name %></h1>
 
 <p><%= @project.description %></p>
+
+<h3>Comments</h3>
+
+<% @project.comments.each do |comment| %>
+  <%= comment.created_at %><br>
+  <%= comment.content %>
+  <hr>
+<% end %>
+
+<%= link_to 'New comment', new_project_comment_path(@project) %>
